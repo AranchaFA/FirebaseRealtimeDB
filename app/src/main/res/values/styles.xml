@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="myFontBlue">
+        <item name="android:fontFamily">@font/amatic_sc_bold</item>
+        <item name="android:textColor">@color/myBlue</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="myFontPink">
+        <item name="android:fontFamily">@font/amatic_sc_bold</item>
+        <item name="android:textColor">@color/myPink</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="myFontBlueMini" parent="myFontBlue">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="myFontPinkMini" parent="myFontPink">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

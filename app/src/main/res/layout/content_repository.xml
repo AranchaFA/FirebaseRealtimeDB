@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.RepositoryActivity"
+    tools:showIn="@layout/activity_repository">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_acceptTargetLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="targetLanguageClicked"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_targetLanguage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/et_targetLanguage"
+            app:layout_constraintTop_toTopOf="@+id/et_targetLanguage"
+            app:srcCompat="@drawable/check" />
+
+        <TextView
+            android:id="@+id/tv_biggestDeck2"
+            style="@style/myFontPinkMini"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:padding="10dp"
+            android:text="Two biggest decks"
+            android:textAlignment="textEnd"
+            app:layout_constraintEnd_toEndOf="@+id/et_targetLanguage"
+            app:layout_constraintStart_toStartOf="@+id/et_targetLanguage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_acceptBiggestDecks"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="biggestDecks2Clicked"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_biggestDeck2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_biggestDeck2"
+            app:layout_constraintTop_toTopOf="@+id/tv_biggestDeck2"
+            app:srcCompat="@drawable/check" />
+
+        <EditText
+            android:id="@+id/et_targetLanguage"
+            style="@style/myFontPinkMini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="What language are you looking for?"
+            android:inputType="textPersonName"
+            android:textAlignment="textEnd"
+            android:textColorHint="@color/myPink"
+            app:layout_constraintEnd_toStartOf="@+id/iv_acceptTargetLanguage"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_biggestDeck2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_repository"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

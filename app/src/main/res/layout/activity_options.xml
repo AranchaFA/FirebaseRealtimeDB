@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="20sp"
+    tools:context=".activities.OptionsActivity">
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="@android:dimen/app_icon_size"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="searchDeckByIDClicked"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_idSearched"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_idSearched"
+        app:layout_constraintTop_toTopOf="@+id/et_idSearched"
+        app:srcCompat="@drawable/buscar" />
+
+    <EditText
+        android:id="@+id/et_idSearched"
+        style="@style/myFontPink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Search your deck by ID"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/myFontBlue"
+        android:textColorHint="@color/myBlue"
+        android:textColorLink="@color/myPink"
+        app:layout_constraintBottom_toTopOf="@+id/layout_info"
+        app:layout_constraintEnd_toStartOf="@id/iv_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_newDeck"
+        style="@style/myFontBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="newDeckClicked"
+        android:text="Create a new deck"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_repository"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_info" />
+
+    <TextView
+        android:id="@+id/tv_repository"
+        style="@style/myFontBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="openRepositoryClicked"
+        android:text="Or take a look at the repository"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_newDeck" />
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_deckName"
+                style="@style/myFontPinkMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Deck name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColorHint="@color/myBlue" />
+
+            <TextView
+                android:id="@+id/tv_size"
+                style="@style/myFontPinkMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:textAlignment="center"
+                android:textColorHint="@color/myBlue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_nativeLanguage"
+                style="@style/myFontPinkMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Native language"
+                android:inputType="textPersonName"
+                android:textAlignment="textEnd"
+                android:textColorHint="@color/myBlue" />
+
+            <EditText
+                android:id="@+id/et_targetLanguage"
+                style="@style/myFontPinkMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Target language"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/myBlue" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_aceptDeckInfo"
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="aceptDeckInfoClicked"
+            app:srcCompat="@drawable/check" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
